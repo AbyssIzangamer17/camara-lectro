@@ -1,0 +1,173 @@
+
+:root {
+    --bg-color: #0c0c0c;
+    --accent-red: #cc0000;
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --border-color: #333333;
+    --hud-green: #00ff7f;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+}
+.accent { color: var(--accent-red); }
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center, rgba(204, 0, 0, 0.1) 0%, transparent 60%);
+    z-index: 0;
+}
+.hero-content {
+    text-align: center;
+    z-index: 10;
+}
+.tagline {
+    font-size: 1rem;
+    color: var(--hud-green);
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+h1 {
+    font-size: 5rem;
+    margin: 0;
+    letter-spacing: 5px;
+    line-height: 1;
+}
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 20px auto 40px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.btn-primary {
+    background-color: var(--accent-red);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--border-color);
+    color: var(--text-secondary);
+}
+.btn-secondary:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+/* Features */
+.features {
+    padding: 100px 0;
+    background-color: #111;
+}
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: var(--text-secondary);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.card {
+    background: #1a1a1a;
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-red);
+}
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.card h3 {
+    margin-top: 0;
+    color: var(--text-primary);
+}
+.card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Tech Stack */
+.tech-stack {
+    padding: 60px 0;
+    text-align: center;
+}
+.stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.pill {
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+
+/* Footer */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+/* HUD Mockup Styling */
+.hud-mockup {
+    /* (CSS-only simplified graphical elements could go here) */
+}
